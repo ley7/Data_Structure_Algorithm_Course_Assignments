@@ -1,0 +1,1 @@
+The main function in the comment is to test whether the hashtable could work correctly to deal with the suitations that rehash, same hashcode, same key, can't find the key

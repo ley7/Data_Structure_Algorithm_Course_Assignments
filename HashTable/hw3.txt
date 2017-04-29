@@ -1,0 +1,22 @@
+1.I use Double linked list to handle collisions. The array is linked-list type. So each slot of the array contains a linked-list. 
+  When the key I¡¯m going to put has the same hash code as an existing key¡¯s hash code in the hash table. 
+  I will add this key&value pair node to the tail of this linked-list in the slot of the array.
+
+Pros: This way is dynamic. It's easier to store data of different sizes in a linked list. We don¡¯t need to allocate the array in advance 
+      to accommodate the possible collision. We can add the new key&value pair whenever the collision happens. Shuffling a linked list is just 
+      a matter of changing what points to. It¡¯s pretty fast.
+      In addition, linked lists lend themselves nicely to efficient multi-threaded implementations. 
+
+Cons: linked lists allow only sequential access to elements. So it will take a long time to traversal the whole linked list. We need to use a
+      appropriate hash function to decrease the possibility of collision. 
+      Also, linked list needs extra storage for references. In other words it needs more memory.
+2.O(n2) 
+Consider the worst case, because in my algorithm, I need to put all the keys and values from the old hash table to the new hash table. 
+In my put operation I need to check if there exists other elements with the same key. So I need to go through the array¡¯s corresponding 
+linked-list to check each node¡¯s key. Consider the worst case, after we calculate new hash code, we find that all the keys have the same
+hash code. So they are in the same bin of the new hash table. So put keys and values into the new hash table, each time we need to scan 
+all the keys in the new hash table. The first time we scan 0 nodes, then 1 nodes, then 2 nodes, then ..., then n-1 elements. The sum is 0+1+2+...+n-1 = n*(n-1)/2 = O(n2).
+3.Ideal case: O(1), there is only one pair of key&value in the slot of the array that we want to find scan.
+  Worst case: O(n), all of the pairs of key&value fall into the same slot of the array. If the key that we want to find is at the end of 
+  the linked-list or the key doesn¡¯t exist in this hash table, we need to go through all of the node. In this case, the complexity is O(n).
+
