@@ -1,0 +1,8 @@
+Name: Le Yu
+
+Time complexity: O(V+E). Firstly, the program scans the data from the txt. The time complexity is O(E). In the process of building graph, because I use Map, 
+the complexity of get and search function is O(1). Then the complexity of the DFS is O(V+E). Finally, because the requirement says that I should use string 
+representation, so I define the function toString.This function need to scan all the vertices in the graph, so the complexity is O(V). In all, the complexity is O(V+E).
+
+Space complexity: O(V+E). The space complexity of the map storing edges is O(E).  The space complexity of the map storing vertices is O(V).
+The space complexity of sortedList to store the the result is O(V).So the total space complexity is O(E+V)
