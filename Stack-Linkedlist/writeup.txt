@@ -1,0 +1,17 @@
+Le Yu
+1.I'm sorry that I wrote the analysis of complexity at the end of typescript in the Assignment 1 last time, I copy them here below.
+2.I have modified the codes, now it can vary the input automaticly.It is in the attacchment of this email.
+3.In addition, I didn't find the mistake until yesterday that my file hw1dlist turned in last time is all messy codes. But the file in my Unix account is correctly and it 
+could run properly(you can see my typescript turned in last time). I'm sorry that maybe when I move the file from the Unix account to my computer, I did some operation and 
+the format of the file changed and it caused the messy code.I'm very sorry for this mistake and this time I turn in the correct file in my attachment.I hope this could help.
+
+1.1 Stack
+Complexity
+the complexity of the push and pop is O(1). Because push and pop operations both have noting to do with n, no matter how big the n is, the operation of 
+push operation is to do the operation to add a node after the last node(top) and the operation of pop is to delete the last node.So the complexity of 
+the push and pop is O(1)
+
+1.2 Doubly Linked List
+Complexity
+the complexity of the search operation is O(n). Considering the worst case that the node we need to search is the last node of this DoubleLinkList, 
+so in this case we need to traverse all the nodes to compare with the node we want to search. In this case big O is n. So the the complexity of the  search operation is O(n)
